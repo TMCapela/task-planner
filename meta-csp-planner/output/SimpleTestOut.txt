@@ -1,0 +1,12 @@
+RobotAction(9)::<9: [MoveTo_FoV3()]>U<AllenInterval 9<20:{0,35} 21:{200,235}> [[0, 35], [200, 235]]>/JUSTIFIED --> 0
+atLocation(5)::<5: [FoV3()]>U<AllenInterval 5<12:{200,235} 13:{242,1000}> [[200, 235], [242, 1000]]>/JUSTIFIED --> 200
+RobotAction(1)::<1: [TakePictureFoV3()]>U<AllenInterval 1<4:{201,236} 5:{241,276}> [[201, 236], [241, 276]]>/JUSTIFIED --> 201
+RobotAction(8)::<8: [MoveTo_FoV4()]>U<AllenInterval 8<18:{241,276} 19:{441,476}> [[241, 276], [441, 476]]>/JUSTIFIED --> 241
+atLocation(4)::<4: [FoV4()]>U<AllenInterval 4<10:{441,476} 11:{483,1000}> [[441, 476], [483, 1000]]>/JUSTIFIED --> 441
+RobotAction(0)::<0: [TakePictureFoV4()]>U<AllenInterval 0<2:{442,477} 3:{482,517}> [[442, 477], [482, 517]]>/JUSTIFIED --> 442
+RobotAction(10)::<10: [MoveTo_FoV2()]>U<AllenInterval 10<22:{482,517} 23:{682,717}> [[482, 517], [682, 717]]>/JUSTIFIED --> 482
+atLocation(6)::<6: [FoV2()]>U<AllenInterval 6<14:{682,717} 15:{724,1000}> [[682, 717], [724, 1000]]>/JUSTIFIED --> 682
+RobotAction(2)::<2: [TakePictureFoV2()]>U<AllenInterval 2<6:{683,718} 7:{723,758}> [[683, 718], [723, 758]]>/JUSTIFIED --> 683
+RobotAction(11)::<11: [MoveTo_FoV1()]>U<AllenInterval 11<24:{723,758} 25:{923,958}> [[723, 758], [923, 958]]>/JUSTIFIED --> 723
+atLocation(7)::<7: [FoV1()]>U<AllenInterval 7<16:{923,958} 17:{965,1000}> [[923, 958], [965, 1000]]>/JUSTIFIED --> 923
+RobotAction(3)::<3: [TakePictureFoV1()]>U<AllenInterval 3<8:{924,959} 9:{964,999}> [[924, 959], [964, 999]]>/JUSTIFIED --> 924

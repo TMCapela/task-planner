@@ -1,0 +1,131 @@
+##################
+# Reserved words #
+#################################################################
+#                                                               #
+#   Head                                                        #
+#   Resource                                                    #
+#   Sensor                                                      #
+#   ContextVariable                                             #
+#   SimpleOperator                                              #
+#   SimpleDomain                                                #
+#   Constraint                                                  #
+#   RequiredState												#
+#   RequriedResource											#
+#   All AllenIntervalConstraint types                           #
+#   '[' and ']' should be used only for constraint bounds       #
+#   '(' and ')' are used for parsing                            #
+#                                                               #
+#################################################################
+
+(Domain TestDom)
+
+(Controllable RobotProprioception)
+(Controllable atLocation)
+(Controllable RobotAction)
+
+(Resource robot1 1)
+(Resource camera 1)
+(Resource FoV1 1)
+(Resource FoV2 1)
+(Resource FoV3 1)
+(Resource FoV4 1)
+
+#(Actuator Robot1)
+
+#TakePicture
+
+(SimpleOperator
+ (Head RobotAction::TakePictureFoV4())
+ (RequiredState req1 atLocation::FoV4())
+ (Constraint During(Head,req1))
+ (Constraint Duration[40,INF](Head))
+ (RequiredResource camera(1))
+ (RequiredResource robot1(1))
+)
+
+(SimpleOperator
+ (Head RobotAction::TakePictureFoV3())
+ (RequiredState req1 atLocation::FoV3())
+ (Constraint During(Head,req1))
+ (Constraint Duration[40,INF](Head))
+ (RequiredResource camera(1))
+ (RequiredResource robot1(1))
+)
+
+(SimpleOperator
+ (Head RobotAction::TakePictureFoV2())
+ (RequiredState req1 atLocation::FoV2())
+ (Constraint During(Head,req1))
+ (Constraint Duration[40,INF](Head))
+ (RequiredResource camera(1))
+ (RequiredResource robot1(1))
+)
+
+(SimpleOperator
+ (Head RobotAction::TakePictureFoV1())
+ (RequiredState req1 atLocation::FoV1())
+ (Constraint During(Head,req1))
+ (Constraint Duration[40,INF](Head))
+ (RequiredResource camera(1))
+ (RequiredResource robot1(1))
+)
+
+#atFoV
+
+(SimpleOperator  
+ (Head atLocation::FoV4()) 
+ (RequiredState req1 RobotAction::MoveTo_FoV4()) 
+ (Constraint MetBy(Head,req1)) 
+ (Constraint Duration[20,INF](Head)) 
+ (RequiredResource FoV4(1))
+)
+
+(SimpleOperator  
+ (Head atLocation::FoV3()) 
+ (RequiredState req1 RobotAction::MoveTo_FoV3()) 
+ (Constraint MetBy(Head,req1)) 
+ (Constraint Duration[20,INF](Head)) 
+ (RequiredResource FoV3(1))
+)
+
+(SimpleOperator  
+ (Head atLocation::FoV2()) 
+ (RequiredState req1 RobotAction::MoveTo_FoV2()) 
+ (Constraint MetBy(Head,req1)) 
+ (Constraint Duration[20,INF](Head)) 
+ (RequiredResource FoV2(1))
+)
+
+(SimpleOperator  
+ (Head atLocation::FoV1()) 
+ (RequiredState req1 RobotAction::MoveTo_FoV1()) 
+ (Constraint MetBy(Head,req1)) 
+ (Constraint Duration[20,INF](Head)) 
+ (RequiredResource FoV1(1))
+)
+
+#Move
+
+(SimpleOperator  
+ (Head RobotAction::MoveTo_FoV4()) 
+ (Constraint Duration[200,INF](Head))
+ (RequiredResource robot1(1))
+)
+
+(SimpleOperator  
+ (Head RobotAction::MoveTo_FoV3()) 
+ (Constraint Duration[200,INF](Head))
+ (RequiredResource robot1(1))
+)
+
+(SimpleOperator  
+ (Head RobotAction::MoveTo_FoV2()) 
+ (Constraint Duration[200,INF](Head))
+ (RequiredResource robot1(1))
+)
+
+(SimpleOperator  
+ (Head RobotAction::MoveTo_FoV1()) 
+ (Constraint Duration[200,INF](Head))
+ (RequiredResource robot1(1))
+)
