@@ -4,7 +4,7 @@ This is the code from the Special Problem (Spring 2020) aimed at surveing task p
 
 ## The framework used
 
-The  framework used is the meta-csp-framework that can be found at [http://metacsp.org](metacsp.org). It uses Constraint Satisfaction Problems (CSP) to decide the task scheduling.
+The  framework used is the meta-csp-framework that can be found at [metacsp.org](http://metacsp.org). It uses Constraint Satisfaction Problems (CSP) to decide the task scheduling.
 
 You should follow the instructions to build the project on Eclipse, then add it to the Java Build Path of your project to access the classes of the framework.
 
